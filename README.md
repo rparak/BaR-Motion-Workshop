@@ -50,19 +50,19 @@ The project is divided into several parts:
 
   a) [Version 0](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Version_0/test_workshop_l1):
   
-    - text
+  Text
   
   b) [Version 1](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Version_1/test_workshop_l1):
   
-    - text
+  Text
   
   c) [Version 2](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Version_2/test_workshop_l1):
   
-    - text
+  Text
   
   d) [Workshop_Template_Folder](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Workshop_Template_Folder):
   
-    - An empty project with necessarily installed versions (runtime, mappview package, etc.), and several files to create your own project (3D objects for SceneViewer digital twin, binding file, mappview theme, etc.)
+  An empty project with necessarily installed versions (runtime, mappview package, etc.), and several files to create your own project (3D objects for SceneViewer digital twin, binding file, mappview theme, etc.)
 
 ## Hardware Components:
 
