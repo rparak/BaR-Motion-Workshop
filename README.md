@@ -98,7 +98,7 @@ Logical View:
 ## Hardware Components:
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/simple_diagram.PNG" width="400" height="220">
+<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/simple_diagram.PNG" width="400" height="200">
 </p>
 
 **Electric Switchboard/Motion Control:**
