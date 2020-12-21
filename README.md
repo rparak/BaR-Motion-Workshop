@@ -42,10 +42,15 @@ mapp Cockpit: 5.12.0
 
 The workshop is focused on simple motion control using Mapp Technology and PLCOpen. The perfect combination of automation development solutions will be created by the additional connection of a visualization package (mappView) and software for digital/virtual twins (Scene Viewer).
 
+<p align="center">
+<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/Workshop_Poster.png" width="550" height="300">
+</p>
+
 The project is divided into several parts:
-a)
-b)
-c)
+  a) Version 0:
+  b) Version 1:
+  c) Version 2:
+  d) Workshop_Template_Folder:
 
 ## Hardware Components:
 
