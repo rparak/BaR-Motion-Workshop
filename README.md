@@ -50,15 +50,15 @@ The project is divided into several parts:
 
   a) [Version 0](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Version_0/test_workshop_l1):
   
-  Text
+  Simple motion control using PLCOpen libraries (MC_Power, MC_Home, etc.) The current version uses the package ACP10 for motion control without any mappMotion additional components. The functionality of the axis is tested using ACP10 Test Manager. The HMI visualization is controlled from the mappView.
   
   b) [Version 1](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Version_1/test_workshop_l1):
   
-  Text
+  The middle way, but very efficient and currently the most used. For motion control uses libraries like MpAxisBasic, MpAxisCyclicSet, etc., but it uses the ACP10 package as in the previous case. The functionality of the axis is tested using ACP10 Test Manager. The HMI visualization is controlled from the mappView.
   
   c) [Version 2](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Version_2/test_workshop_l1):
   
-  Text
+  The latest (newest) motion control with mappMotion using libraries like MpAxisBasic, etc.  The functionality of the axis is tested using mappCockpit. The HMI visualization is controlled from the mappView.
   
   d) [Workshop_Template_Folder](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Workshop_Template_Folder):
   
