@@ -61,6 +61,21 @@ http://localhost:8084/mappCockpit or http://PLC_ADDRESS:8084/mappCockpit
 <img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/digT_sv.PNG" width="550" height="300">
 </p>
 
+## Additional information:
+
+**MappTechnology:**
+
+Link: https://www.br-automation.com/en/products/software/mapp-technology/
+Link: https://www.youtube.com/watch?v=poufs5F3xB8
+
+**B&R Automation - Free Webinars (CZ):**
+
+Link: https://www.br-automation.com/cs/akademie/webinare/
+
+**B&R Automation - Academy:**
+
+Link: https://www.br-automation.com/en/academy/dates-and-registration/
+
 ## Contact Info:
 Roman.Parak@outlook.com
 
