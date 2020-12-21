@@ -15,7 +15,7 @@ Link SceneViewer B&R: https://www.br-automation.com/en/downloads/software/simula
 ## Hardware Components:
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/simple_diagram.PNG" width="382" height="200">
+<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/simple_diagram.PNG" width="400" height="250">
 </p>
 
 **Electric Switchboard/Motion Control:**
