@@ -82,7 +82,7 @@ Logical View:
 [ AS Program   ] /Logical/axCtrl_T/
 [ AS MappView  ] /Logical/mappView/
 Physical View:
-[ AS MappMotion ] /Physical/X20CP1584/X20CP1584/mappMotion/
+[ AS MappMotion  ] /Physical/X20CP1584/X20CP1584/mappMotion/
 [ AS MappCockpit ] /Physical/X20CP1584/X20CP1584/mappCockpit/
 [ AS MappView    ] /Physical/X20CP1584/X20CP1584/mappView/
 ```
