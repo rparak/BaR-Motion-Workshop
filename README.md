@@ -66,6 +66,7 @@ http://localhost:8084/mappCockpit or http://PLC_ADDRESS:8084/mappCockpit
 **MappTechnology:**
 
 Link: https://www.br-automation.com/en/products/software/mapp-technology/
+
 Link: https://www.youtube.com/watch?v=poufs5F3xB8
 
 **B&R Automation - Free Webinars (CZ):**
