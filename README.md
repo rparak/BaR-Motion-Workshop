@@ -12,6 +12,32 @@ Link AS B&R: https://www.br-automation.com/en/downloads/software/automation-stud
 
 Link SceneViewer B&R: https://www.br-automation.com/en/downloads/software/simulation/br-scene-viewer/
 
+**Version 0:**
+
+```bash
+Automation Runtime: C4.90 (PLC -> X20CP1584)
+ACP10 ARNC0 (Motion): 5.12.2
+mappView  : 5.12.1
+```
+
+**Version 1:**
+
+```bash
+Automation Runtime: C4.90 (PLC -> X20CP1584)
+ACP10 ARNC0 (Motion): 5.12.2
+MpAxis: 1.75.0
+mappView  : 5.12.1
+```
+
+**Version 2:**
+
+```bash
+Automation Runtime: C4.90 (PLC -> X20CP1584)
+mapp Motion: 5.12.2
+mapp View  : 5.12.1
+mapp Cockpit: 5.12.0
+```
+
 ## Project Description:
 
 ## Hardware Components:
@@ -45,7 +71,7 @@ http://localhost:81/index.html?visuId=axis_control or http://PLC_ADDRESS:81/inde
 <img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/mappView.png" width="550" height="300">
 </p>
 
-**MappCockpit:**
+**MappCockpit (Exclusively for MappMotion control):**
 
 IP Address (Simulation/Real HW): 
 
