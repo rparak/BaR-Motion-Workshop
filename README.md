@@ -40,6 +40,13 @@ mapp Cockpit: 5.12.0
 
 ## Project Description:
 
+The workshop is focused on simple motion control using Mapp Technology and PLCOpen. The perfect combination of automation development solutions will be created by the additional connection of a visualization package (mappView) and software for digital/virtual twins (Scene Viewer).
+
+The project is divided into several parts:
+a)
+b)
+c)
+
 ## Hardware Components:
 
 <p align="center">
