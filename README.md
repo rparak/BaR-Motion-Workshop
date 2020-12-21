@@ -49,12 +49,16 @@ The workshop is focused on simple motion control using Mapp Technology and PLCOp
 The project is divided into several parts:
 
   a) [Version 0](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Version_0/test_workshop_l1):
+    - text
   
-  b) Version 1:
+  b) [Version 1](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Version_1/test_workshop_l1):
+    - text
   
-  c) Version 2:
+  c) [Version 2](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Version_2/test_workshop_l1):
+    - text
   
-  d) Workshop_Template_Folder:
+  d) [Workshop_Template_Folder](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Workshop_Template_Folder):
+    - text
 
 ## Hardware Components:
 
