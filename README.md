@@ -12,7 +12,11 @@ Link AS B&R: https://www.br-automation.com/en/downloads/software/automation-stud
 
 Link SceneViewer B&R: https://www.br-automation.com/en/downloads/software/simulation/br-scene-viewer/
 
-**Hardware Components:**
+## Hardware Components:
+
+<p align="center">
+<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/simple_diagram.PNG" width="382" height="533">
+</p>
 
 **Electric Switchboard/Motion Control:**
 | Part Name     | Link          |
