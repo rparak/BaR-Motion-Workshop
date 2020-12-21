@@ -12,6 +12,8 @@ Link AS B&R: https://www.br-automation.com/en/downloads/software/automation-stud
 
 Link SceneViewer B&R: https://www.br-automation.com/en/downloads/software/simulation/br-scene-viewer/
 
+## Project Description:
+
 ## Hardware Components:
 
 <p align="center">
@@ -24,6 +26,33 @@ Link SceneViewer B&R: https://www.br-automation.com/en/downloads/software/simula
 | PLC system (X20CP1584) | https://www.br-automation.com/en/products/plc-systems/x20-system/x20-cpus/x20cp1584/ |
 | ACOPOSmicro -> Inverter modules (80VD100PD.C000-01) | https://www.br-automation.com/en/products/motion-control/acoposmicro/inverter-modules/80vd100pdc000-01/?noredirect=1 |
 
+## HMI Visualization:
+
+**MappView:**
+
+IP Address (Simulation/Real HW): 
+
+http://localhost:81/index.html?visuId=axis_control or http://PLC_ADDRESS:81/index.html?visuId=axis_control
+
+<p align="center">
+<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/mappView.png" width="800" height="450">
+</p>
+
+**MappCockpit:**
+
+IP Address (Simulation/Real HW): 
+
+http://localhost:8084/mappCockpit or http://PLC_ADDRESS:8084/mappCockpit
+
+<p align="center">
+<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/mappCockpit.png" width="800" height="450">
+</p>
+
+## Contact Info:
+Roman.Parak@outlook.com
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
 **7th Axis (Linear Conveyor):**
 | Part Name     | Link          |
