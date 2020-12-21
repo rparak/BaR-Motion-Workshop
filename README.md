@@ -52,18 +52,49 @@ The project is divided into several parts:
   
   Simple motion control using PLCOpen libraries (MC_Power, MC_Home, etc.) The current version uses the package ACP10 for motion control without any mappMotion additional components. The functionality of the axis is tested using ACP10 Test Manager. The HMI visualization is controlled from the mappView.
   
+```bash
+Logical View:
+[ AS Program   ] /Logical/axCtrl_T/
+[ AS MappView  ] /Logical/mappView/
+Physical View:
+[ AS MappView  ] /Physical/X20CP1584/X20CP1584/mappView
+```
+  
   b) [Version 1](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Version_1/test_workshop_l1):
   
   The middle way, but very efficient and currently the most used. For motion control uses libraries like MpAxisBasic, MpAxisCyclicSet, etc., but it uses the ACP10 package as in the previous case. The functionality of the axis is tested using ACP10 Test Manager. The HMI visualization is controlled from the mappView.
+  
+ ```bash
+Logical View:
+[ AS Program   ] /Logical/axCtrl_T/
+[ AS MappView  ] /Logical/mappView/
+Physical View:
+[ AS Mapp Axis ] /Physical/X20CP1584/X20CP1584/Motion/
+[ AS MappView  ] /Physical/X20CP1584/X20CP1584/mappView/
+```
   
   c) [Version 2](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Version_2/test_workshop_l1):
   
   The latest (newest) motion control with mappMotion using libraries like MpAxisBasic, etc.  The functionality of the axis is tested using mappCockpit. The HMI visualization is controlled from the mappView.
   
+ ```bash
+Logical View:
+[ AS Program   ] /Logical/axCtrl_T/
+[ AS MappView  ] /Logical/mappView/
+Physical View:
+[ AS MappMotion ] /Physical/X20CP1584/X20CP1584/mappMotion/
+[ AS MappCockpit ] /Physical/X20CP1584/X20CP1584/mappCockpit/
+[ AS MappView    ] /Physical/X20CP1584/X20CP1584/mappView/
+```
+
   d) [Workshop_Template_Folder](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Workshop_Template_Folder):
   
   An empty project with necessarily installed versions (runtime, mappview package, etc.), and several files to create your own project (3D objects for SceneViewer digital twin, binding file, mappview theme, etc.)
-
+  
+ ```bash
+Logical View:
+[ AS Program   ] /Logical/axCtrl_T/
+```
 ## Hardware Components:
 
 <p align="center">
