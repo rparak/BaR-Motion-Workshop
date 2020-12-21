@@ -42,7 +42,7 @@ IP Address (Simulation/Real HW):
 http://localhost:81/index.html?visuId=axis_control or http://PLC_ADDRESS:81/index.html?visuId=axis_control
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/mappView.png" width="600" height="300">
+<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/mappView.png" width="550" height="300">
 </p>
 
 **MappCockpit:**
@@ -52,13 +52,13 @@ IP Address (Simulation/Real HW):
 http://localhost:8084/mappCockpit or http://PLC_ADDRESS:8084/mappCockpit
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/mappCockpit.png" width="600" height="300">
+<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/mappCockpit.png" width="550" height="300">
 </p>
 
 ## Digital Twin:
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/digT_sv.PNG" width="600" height="300">
+<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/digT_sv.PNG" width="550" height="300">
 </p>
 
 ## Contact Info:
