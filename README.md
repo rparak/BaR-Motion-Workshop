@@ -62,7 +62,7 @@ The project is divided into several parts:
   
   d) [Workshop_Template_Folder](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Workshop_Template_Folder):
   
-    - text
+    - An empty project with necessarily installed versions (runtime, mappview package, etc.), and several files to create your own project (3D objects for SceneViewer digital twin, binding file, mappview theme, etc.)
 
 ## Hardware Components:
 
