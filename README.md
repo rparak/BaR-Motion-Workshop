@@ -133,13 +133,13 @@ IP Address (Simulation/Real HW):
 http://localhost:8084/mappCockpit or http://PLC_ADDRESS:8084/mappCockpit
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/mappCockpit.png" width="550" height="300">
+<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/mappCockpit.png" width="800" height="500">
 </p>
 
 ## Digital Twin:
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/digT_sv.PNG" width="550" height="300">
+<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/digT_sv.PNG" width="800" height="500">
 </p>
 
 ## Additional information:
