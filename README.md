@@ -43,7 +43,7 @@ mapp Cockpit: 5.12.0
 The workshop is focused on simple motion control using Mapp Technology and PLCOpen. The perfect combination of automation development solutions will be created by the additional connection of a visualization package (mappView) and software for digital/virtual twins (Scene Viewer).
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/Workshop_Poster.png" width="550" height="300">
+<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/Workshop_Poster.png" width="800" height="500">
 </p>
 
 The project is divided into several parts:
@@ -123,7 +123,7 @@ IP Address (Simulation/Real HW):
 http://localhost:81/index.html?visuId=axis_control or http://PLC_ADDRESS:81/index.html?visuId=axis_control
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/mappView.png" width="550" height="300">
+<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/mappView.png" width="800" height="500">
 </p>
 
 **MappCockpit (Exclusively for MappMotion control):**
