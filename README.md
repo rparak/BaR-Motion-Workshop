@@ -6,14 +6,16 @@
 ```bash
 Automation Studio V 4.9.2.46
 Scene Viewer V 4.1.0
-Unity3D 2020.1.8f1
+Unity3D 2020.1.8f1, Vuforia 8.3.8 and later
 ```
 
-Link AS B&R: https://www.br-automation.com/en/downloads/software/automation-studio/automation-studio-49
+AS B&R: https://www.br-automation.com/en/downloads/software/automation-studio/automation-studio-49
 
-Link SceneViewer B&R: https://www.br-automation.com/en/downloads/software/simulation/br-scene-viewer/
+SceneViewer B&R: https://www.br-automation.com/en/downloads/software/simulation/br-scene-viewer/
 
 Unity3D: https://unity3d.com/get-unity/download/archive
+
+Vuforia Engine: https://developer.vuforia.com/downloads/sdk
 
 **Version 0:**
 
