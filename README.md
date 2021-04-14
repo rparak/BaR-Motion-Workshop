@@ -138,8 +138,16 @@ http://localhost:8084/mappCockpit or http://PLC_ADDRESS:8084/mappCockpit
 
 ## Digital Twin:
 
+**Scene Viewer:**
+
 <p align="center">
 <img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/digT_sv.PNG" width="800" height="500">
+</p>
+
+**Unity3D:**
+
+<p align="center">
+<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/lin_ax_1.png" width="800" height="500">
 </p>
 
 ## Additional information:
