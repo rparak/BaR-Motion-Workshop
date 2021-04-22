@@ -100,6 +100,16 @@ Physical View:
 Logical View:
 [ AS Program   ] /Logical/axCtrl_T/
 ```
+
+[Workshop_Template_Folder](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Workshop_Template_Folder):
+  
+Text
+  
+ ```bash
+Logical View:
+[ AS Program   ] /Logical/axCtrl_T/
+```
+
 ## Hardware Components:
 
 <p align="center">
