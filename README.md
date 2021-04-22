@@ -101,14 +101,9 @@ Logical View:
 [ AS Program   ] /Logical/axCtrl_T/
 ```
 
-[Workshop_Template_Folder](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Workshop_Template_Folder):
+[Workshop_Template_Folder](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Unity3D):
   
-Text
-  
- ```bash
-Logical View:
-[ AS Program   ] /Logical/axCtrl_T/
-```
+Client / server communication via OPC UA, which is implemented in Unity3D (Server - B&R Automation PLC, Client - Unity3D). The application can be used for digital twins or augmented reality, both principles are in a folder.
 
 ## Hardware Components:
 
