@@ -4,18 +4,23 @@
 
 **Software:**
 ```bash
-Automation Studio V 4.9.2.46
-Scene Viewer V 4.1.0
-Unity3D 2020.1.8f1, Vuforia 8.3.8 and later
+Automation Studio V 4.9.2.46, Scene Viewer V 4.1.0, Blender, Unity3D 2020.1.8f1, Vuforia 8.3.8 and later
 ```
 
-AS B&R: https://www.br-automation.com/en/downloads/software/automation-studio/automation-studio-49
+**Supported on the following operating systems:**
+```bash
+Universal Windows Platform, Android
+```
 
-SceneViewer B&R: https://www.br-automation.com/en/downloads/software/simulation/br-scene-viewer/
-
-Unity3D: https://unity3d.com/get-unity/download/archive
-
-Vuforia Engine: https://developer.vuforia.com/downloads/sdk
+| Software/Package      | Link                                                                                  |
+| --------------------- | ------------------------------------------------------------------------------------- |
+| Blender               | https://www.blender.org/download/                                                     |
+| Unity3D               | https://unity3d.com/get-unity/download/archive                                        |
+| Vuforia Engine        | https://developer.vuforia.com/downloads/sdk                                           |
+| Unity HDRI Pack       | https://assetstore.unity.com/packages/2d/textures-materials/sky/unity-hdri-pack-72511 |
+| B&R Automation        | https://www.br-automation.com/en/downloads/#categories=Software-1344987434933         |
+| SceneViewer B&R       | https://www.br-automation.com/en/downloads/software/simulation/br-scene-viewer/       |
+| Visual Studio         | https://visualstudio.microsoft.com/downloads/                                         |
 
 **Version 0:**
 
