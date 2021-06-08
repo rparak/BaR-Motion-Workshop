@@ -53,12 +53,12 @@ mapp Cockpit: 5.12.0
 The workshop is focused on simple motion control using Mapp Technology and PLCOpen. The perfect combination of automation development solutions will be created by the additional connection of a visualization package (mappView) and software for digital/virtual twins (Scene Viewer).
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/Workshop_Poster.png" width="800" height="500">
+<img src="https://github.com/rparak/BaR-Motion-Workshop/blob/master/images/Workshop_Poster.png" width="800" height="500">
 </p>
 
 The project is divided into several parts:
 
-  a) [Version 0](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Version_0/test_workshop_l1):
+  a) [Version 0](https://github.com/rparak/BaR-Motion-Workshop/tree/master/Version_0/test_workshop_l1):
   
   Simple motion control using PLCOpen libraries (MC_Power, MC_Home, etc.) The current version uses the package ACP10 for motion control without any mappMotion additional components. The functionality of the axis is tested using ACP10 Test Manager. The HMI visualization is controlled from the mappView.
   
@@ -70,7 +70,7 @@ Physical View:
 [ AS MappView  ] /Physical/X20CP1584/X20CP1584/mappView
 ```
   
-  b) [Version 1](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Version_1/test_workshop_l1):
+  b) [Version 1](https://github.com/rparak/BaR-Motion-Workshop/tree/master/Version_1/test_workshop_l1):
   
   The middle way, but very efficient and currently the most used. For motion control uses libraries like MpAxisBasic, MpAxisCyclicSet, etc., but it uses the ACP10 package as in the previous case. The functionality of the axis is tested using ACP10 Test Manager. The HMI visualization is controlled from the mappView.
   
@@ -83,7 +83,7 @@ Physical View:
 [ AS MappView  ] /Physical/X20CP1584/X20CP1584/mappView/
 ```
   
-  c) [Version 2](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Version_2/test_workshop_l1):
+  c) [Version 2](https://github.com/rparak/BaR-Motion-Workshop/tree/master/Version_2/test_workshop_l1):
   
   The latest (newest) motion control with mappMotion using libraries like MpAxisBasic, etc.  The functionality of the axis is tested using mappCockpit. The HMI visualization is controlled from the mappView.
   
@@ -97,7 +97,7 @@ Physical View:
 [ AS MappView    ] /Physical/X20CP1584/X20CP1584/mappView/
 ```
 
-  d) [Workshop_Template_Folder](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Workshop_Template_Folder):
+  d) [Workshop_Template_Folder](https://github.com/rparak/BaR-Motion-Workshop/tree/master/Workshop_Template_Folder):
   
   An empty project with necessarily installed versions (runtime, mappview package, etc.), and several files to create your own project (3D objects for SceneViewer digital twin, binding file, mappview theme, etc.)
   
@@ -106,14 +106,14 @@ Logical View:
 [ AS Program   ] /Logical/axCtrl_T/
 ```
 
-[Workshop_Template_Folder](https://github.com/rparak/BaR-Workshop-Simple/tree/master/Unity3D):
+[Workshop_Template_Folder](https://github.com/rparak/BaR-Motion-Workshop/tree/master/Unity3D):
   
 Client / server communication via OPC UA, which is implemented in Unity3D (Server - B&R Automation PLC, Client - Unity3D). The application can be used for digital twins or augmented reality, both principles are in a folder.
 
 ## Hardware Components:
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/simple_diagram.PNG" width="400" height="175">
+<img src="https://github.com/rparak/BaR-Motion-Workshop/blob/master/images/simple_diagram.PNG" width="400" height="175">
 </p>
 
 **Electric Switchboard/Motion Control:**
@@ -138,7 +138,7 @@ IP Address (Simulation/Real HW):
 http://localhost:81/index.html?visuId=axis_control or http://PLC_ADDRESS:81/index.html?visuId=axis_control
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/mappView.png" width="800" height="500">
+<img src="https://github.com/rparak/BaR-Motion-Workshop/blob/master/images/mappView.png" width="800" height="500">
 </p>
 
 **MappCockpit (Exclusively for MappMotion control):**
@@ -148,7 +148,7 @@ IP Address (Simulation/Real HW):
 http://localhost:8084/mappCockpit or http://PLC_ADDRESS:8084/mappCockpit
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/mappCockpit.png" width="800" height="500">
+<img src="https://github.com/rparak/BaR-Motion-Workshop/blob/master/images/mappCockpit.png" width="800" height="500">
 </p>
 
 ## Digital Twin:
@@ -156,13 +156,13 @@ http://localhost:8084/mappCockpit or http://PLC_ADDRESS:8084/mappCockpit
 **Scene Viewer:**
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/digT_sv.PNG" width="800" height="500">
+<img src="https://github.com/rparak/BaR-Motion-Workshop/blob/master/images/digT_sv.PNG" width="800" height="500">
 </p>
 
 **Unity3D:**
 
 <p align="center">
-<img src="https://github.com/rparak/BaR-Workshop-Simple/blob/master/images/lin_ax_1.png" width="800" height="500">
+<img src="https://github.com/rparak/BaR-Motion-Workshop/blob/master/images/lin_ax_1.png" width="800" height="500">
 </p>
 
 ## Additional information:
