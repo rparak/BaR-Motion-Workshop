@@ -165,6 +165,12 @@ http://localhost:8084/mappCockpit or http://PLC_ADDRESS:8084/mappCockpit
 <img src="https://github.com/rparak/BaR-Motion-Workshop/blob/master/images/lin_ax_1.png" width="800" height="500">
 </p>
 
+## Augmented Reality:
+
+<p align="center">
+<img src="https://github.com/rparak/BaR-Motion-Workshop/blob/master/images/ar_1.JPG" width="800" height="500">
+</p>
+
 ## Additional information:
 
 **MappTechnology:**
