@@ -190,5 +190,16 @@ Link: https://www.br-automation.com/en/academy/dates-and-registration/
 ## Contact Info:
 Roman.Parak@outlook.com
 
+## Citation (BibTex)
+```bash
+@misc{RomanParak_Unity3D,
+  author = {Roman Parak},
+  title = {A digital-twins in the field of industrial robotics integrated into the unity3d development platform},
+  year = {2020-2021},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/rparak/Unity3D_Robotics_Overview}}
+}
+```
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
