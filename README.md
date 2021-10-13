@@ -108,7 +108,7 @@ Logical View:
 
 [Workshop_Template_Folder](https://github.com/rparak/BaR-Motion-Workshop/tree/master/Unity3D):
   
-Client / server communication via OPC UA, which is implemented in Unity3D (Server - B&R Automation PLC, Client - Unity3D). The application can be used for digital twins or augmented reality, both principles are in a folder.
+Client-server communication via OPC UA, which is implemented in Unity3D (Server - B&R Automation PLC, Client - Unity3D). The application can be used for digital twins or augmented reality, both principles are in a folder.
 
 ## Hardware Components:
 
