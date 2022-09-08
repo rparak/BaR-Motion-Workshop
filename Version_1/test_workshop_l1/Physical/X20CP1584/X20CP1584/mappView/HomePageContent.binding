@@ -1,10 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <BindingsSet id="HomePageContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <Bindings>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::axCtrl_T:ctrl_lin_ax_0.read.actual_position" attribute="value" />
-<Target xsi:type="brease" contentRefId="HomePageContent" widgetRefId="OnlineChartGraph1" attribute="value" />
-</Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::axCtrl_T:ctrl_lin_ax_0.read.actual_velocity" attribute="value" />
 <Target xsi:type="brease" contentRefId="HomePageContent" widgetRefId="RadialGauge4" attribute="value" />
@@ -27,23 +23,7 @@
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::axCtrl_T:ctrl_lin_ax_0.read.actual_velocity" attribute="value" />
-<Target xsi:type="brease" contentRefId="HomePageContent" widgetRefId="OnlineChartGraph2" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::axCtrl_T:ctrl_lin_ax_0.read.actual_velocity" attribute="value" />
 <Target xsi:type="brease" contentRefId="HomePageContent" widgetRefId="NumericOutput3" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::axCtrl_T:ctrl_lin_ax_0.read.set_position" attribute="value" />
-<Target xsi:type="brease" contentRefId="HomePageContent" widgetRefId="OnlineChartGraph3" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::axCtrl_T:ctrl_lin_ax_0.read.set_velocity" attribute="value" />
-<Target xsi:type="brease" contentRefId="HomePageContent" widgetRefId="OnlineChartGraph4" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::axCtrl_T:ctrl_lin_ax_0.write.deceleration" attribute="value" />
-<Target xsi:type="brease" contentRefId="HomePageContent" widgetRefId="NumericInput11" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::axCtrl_T:ctrl_lin_ax_0.write.acceleration" attribute="value" />
@@ -90,8 +70,16 @@
 <Target xsi:type="brease" contentRefId="HomePageContent" widgetRefId="ImageList10" attribute="selectedIndex" />
 </Binding>
 <Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::axCtrl_T:ctrl_lin_ax_0.write.deceleration" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomePageContent" widgetRefId="NumericInput11" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::axCtrl_T:ctrl_lin_ax_0.read.actual_position" attribute="value" />
-<Target xsi:type="brease" contentRefId="HomePageContent" widgetRefId="BasicSlider1" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomePageContent" widgetRefId="OnlineChartGraph1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::axCtrl_T:ctrl_lin_ax_0.read.actual_velocity" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomePageContent" widgetRefId="OnlineChartGraph2" attribute="value" />
 </Binding>
 </Bindings>
 </BindingsSet>
