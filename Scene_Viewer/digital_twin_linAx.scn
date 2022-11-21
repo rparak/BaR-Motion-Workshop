@@ -4,9 +4,9 @@
 	<ParID parid="81" val="60"/>
 	<ParID parid="82" val="1"/>
 	<ParID parid="90" val="0"/>
-	<ParID parid="100" val="759.078"/>
-	<ParID parid="101" val="-1262.2"/>
-	<ParID parid="102" val="656.641"/>
+	<ParID parid="100" val="108.984"/>
+	<ParID parid="101" val="-1288.45"/>
+	<ParID parid="102" val="516.68"/>
 	<ParID parid="103" val="-0.315187"/>
 	<ParID parid="104" val="0.855314"/>
 	<ParID parid="105" val="-0.411212"/>
@@ -39,17 +39,17 @@
 		<ParID parid="140" val="5"/>
 		<ParID parid="150" val="3: Grey Matte"/>
 	</Object>
-	<Object objecttypeid="110" name="lin_ax_Base.obj" visible="1" mask="" binding="" jointoparent="0">
+	<Object objecttypeid="110" name="SMC_Linear_Track_LEJSH63NZA_800_0_1.obj" visible="1" mask="" binding="" jointoparent="0">
 		<ParID parid="100" val="0"/>
 		<ParID parid="101" val="0"/>
-		<ParID parid="102" val="550"/>
+		<ParID parid="102" val="0"/>
 		<ParID parid="103" val="0"/>
 		<ParID parid="104" val="0"/>
 		<ParID parid="105" val="90"/>
 		<ParID parid="106" val="1"/>
 		<ParID parid="107" val="1"/>
 		<ParID parid="108" val="1"/>
-		<ParID parid="120" val=".\3D_Models\lin_ax_Base.obj"/>
+		<ParID parid="120" val="..\..\..\..\Desktop\SMC_Linear_Track_LEJSH63NZA_800_0_1.obj"/>
 		<ParID parid="121" val="3: Grey Matte"/>
 		<ParID parid="130" val="1"/>
 		<Object objecttypeid="190" name="Prismatic joint (slider)" visible="1" mask="" binding="#150*::Program:actual_position" jointoparent="0">
@@ -78,7 +78,7 @@
 			<ParID parid="145" val="0"/>
 			<ParID parid="150" val="0"/>
 			<ParID parid="160" val="FALSE"/>
-			<Object objecttypeid="110" name="lin_ax_Link1.obj" visible="1" mask="" binding="" jointoparent="0">
+			<Object objecttypeid="110" name="Joint_LT_0_1.obj" visible="1" mask="" binding="" jointoparent="0">
 				<ParID parid="100" val="0"/>
 				<ParID parid="101" val="0"/>
 				<ParID parid="102" val="0"/>
@@ -88,7 +88,7 @@
 				<ParID parid="106" val="1"/>
 				<ParID parid="107" val="1"/>
 				<ParID parid="108" val="1"/>
-				<ParID parid="120" val=".\3D_Models\lin_ax_Link1.obj"/>
+				<ParID parid="120" val="..\..\..\..\Desktop\Joint_LT_0_1.obj"/>
 				<ParID parid="121" val="3: Grey Matte"/>
 				<ParID parid="130" val="1"/>
 			</Object>
