@@ -1,4 +1,4 @@
-# B&R Automation Workshop - simple motion control with MappTechnology and PLCOpen
+# B&R Automation Workshop - Simple motion control with MappTechnology and PLCOpen
 
 ## Requirements:
 
