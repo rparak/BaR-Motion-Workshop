@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio FileVersion="4.9"?>
-<AcoposParameterTable>
-  <Root Name="Parameters">
-    <Parameter Name="ENCOD_CMD" ID="719" Value="1" Description="Encoder1: Encoder command" />
-  </Root>
-</AcoposParameterTable>
