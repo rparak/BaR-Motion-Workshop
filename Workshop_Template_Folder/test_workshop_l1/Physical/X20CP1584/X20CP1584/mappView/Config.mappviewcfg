@@ -32,7 +32,7 @@
         <Property ID="cachingSlots" Value="200" />
         <Property ID="preserveOldValues" Value="TRUE" />
       </Group>
-      <Property ID="defaultVisu" Value="axis_control" />
+      <Property ID="defaultVisu" Value="" />
       <Group ID="Widget">
         <Selector ID="renderingPolicy" Value="1" />
         <Selector ID="securityPolicy" Value="1" />

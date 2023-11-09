@@ -18,7 +18,7 @@ void _INIT ProgramInit(void)
 }	
 
 void _CYCLIC ProgramCyclic(void)
-{	
+{
 	MpAxisBasic(&MpAxisBasic_0);	
 }
 

@@ -8,7 +8,7 @@
     <!--<Navigation refId="" />-->
   </Navigations>  
   <BindingsSets>
-    <!--<BindingsSet refId="" />-->
+    <!--<BindingsSet refId="HomePageContent_binding" />-->
   </BindingsSets>
   <EventBindingsSets>
     <!--<EventBindingsSet refId="" />-->
