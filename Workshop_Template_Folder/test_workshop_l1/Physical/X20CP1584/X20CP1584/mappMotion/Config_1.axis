@@ -16,22 +16,22 @@
         <Property ID="LowerLimitMin" Value="-1.79769313486231E308" />
         <Property ID="UpperLimitMax" Value="1.79769313486231E308" />
         <Property ID="LowerLimit" Value="-2" />
-        <Property ID="UpperLimit" Value="8004" />
+        <Property ID="UpperLimit" Value="804" />
       </Group>
       <Property ID="VelocityIsReadOnly" Value="0" />
       <Selector ID="Velocity">
         <Property ID="VelocityMax" Value="3.4E38" />
-        <Property ID="Velocity" Value="1000" />
+        <Property ID="Velocity" Value="500" />
       </Selector>
       <Property ID="AccelerationIsReadOnly" Value="0" />
       <Selector ID="Acceleration">
         <Property ID="AccelerationMax" Value="3.4E38" />
-        <Property ID="Acceleration" Value="10000" />
+        <Property ID="Acceleration" Value="5000" />
       </Selector>
       <Property ID="DecelerationIsReadOnly" Value="0" />
       <Selector ID="Deceleration">
         <Property ID="DecelerationMax" Value="3.4E38" />
-        <Property ID="Deceleration" Value="10000" />
+        <Property ID="Deceleration" Value="5000" />
       </Selector>
     </Selector>
     <Selector ID="Alarms" Value="None" />
