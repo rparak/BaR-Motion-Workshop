@@ -58,7 +58,7 @@
 <Target xsi:type="brease" contentRefId="HomePageContent" widgetRefId="ToggleSwitch1" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::axCtrl_T:ctrl_lin_ax_0.cmd.move_absolute_postion" attribute="value" />
+<Source xsi:type="opcUa" refId="::axCtrl_T:ctrl_lin_ax_0.cmd.move_absolute_position" attribute="value" />
 <Target xsi:type="brease" contentRefId="HomePageContent" widgetRefId="MomentaryPushButton2" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
