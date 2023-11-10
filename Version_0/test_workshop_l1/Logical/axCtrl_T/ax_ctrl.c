@@ -77,8 +77,8 @@ void _INIT ProgramInit(void)
 /**
  * Program Cyclic 
  * 
- * Duration (Cycle Time): 2000 [µs] 
- * Tolerance            : 0    [µs]
+ * Duration (Cycle Time): 2000 [Âµs] 
+ * Tolerance            : 0    [Âµs]
  */
 void _CYCLIC ProgramCyclic(void)
 {
@@ -112,14 +112,14 @@ void _CYCLIC ProgramCyclic(void)
 			break;
 		case LIN_AX_CTRL_WAIT: ///< Wait for the command.
 			{
-				if(ctrl_lin_ax_0.cmd.move_absolute_postion == 1){
+				if(ctrl_lin_ax_0.cmd.move_absolute_position == 1){
 					ctrl_lin_ax_0.actual_state = LIN_AX_CTRL_MOVE_1;
 				}
 			}
 			break;
 		case LIN_AX_CTRL_MOVE_1: ///< Move Axis (1) -> Set Parameters.
 			{	
-				ctrl_lin_ax_0.cmd.move_absolute_postion = 0;
+				ctrl_lin_ax_0.cmd.move_absolute_position = 0;
 				
 				MC_MoveAbsolute_0.Position     = ctrl_lin_ax_0.write.position;
 				MC_MoveAbsolute_0.Velocity     = ctrl_lin_ax_0.write.velocity;
