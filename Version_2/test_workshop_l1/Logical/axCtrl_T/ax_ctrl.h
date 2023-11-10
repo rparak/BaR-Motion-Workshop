@@ -52,7 +52,7 @@ typedef enum motion_ctrl_state_enum{
 typedef struct motion_ctrl_command{
 	BOOL power;                 /**< Power on. */
 	BOOL home;                  /**< Home. */
-	BOOL move_absolute_postion; /**< Move to the absolute position. */
+	BOOL move_absolute_position; /**< Move to the absolute position. */
 	BOOL reset_error;           /**< Reset error. */
 }motion_ctrl_command;
 
