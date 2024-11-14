@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio FileVersion="4.9"?>
-<NcMapping NcSwId="Acp10">
-  <NcObject Name="gAxis01" ModuleId="80VD100PD.C000-01" Type="ncAXIS" Channel="1" AcoposSimulation="Off" InitParameter="gAxis01i" AcoposParameter="gAxis01a" Disabled="FALSE" ModuleDisabled="FALSE" />
-  <NcObject Name="80VD100PD.C000-01_ncAXIS2" ModuleId="80VD100PD.C000-01" Type="ncAXIS" Channel="2" AcoposSimulation="Off" Disabled="TRUE" ModuleDisabled="FALSE" />
-  <NcObject Name="80VD100PD.C000-01_ncV_AXIS1" ModuleId="80VD100PD.C000-01" Type="ncV_AXIS" Channel="1" Disabled="TRUE" ModuleDisabled="FALSE" />
-  <NcObject Name="80VD100PD.C000-01_ncV_AXIS2" ModuleId="80VD100PD.C000-01" Type="ncV_AXIS" Channel="2" Disabled="TRUE" ModuleDisabled="FALSE" />
-</NcMapping>
