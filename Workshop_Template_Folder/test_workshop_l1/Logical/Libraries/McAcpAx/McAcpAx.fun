@@ -668,3 +668,101 @@ FUNCTION_BLOCK MC_BR_ApsmPowerOff_AcpAx (* This function block switches off the 
 		Internal : McInternalType;
 	END_VAR
 END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK MC_BR_InitParIDTransfer_AcpAx (*This function block initializes a cyclic ParID transfer from the master to the slave*)
+	VAR_INPUT
+		Master : REFERENCE TO McAxisType; (*master axis reference*)
+		Slave : REFERENCE TO McAxisType; (*slave axis reference*)
+		Execute : BOOL; (*initializes transfer on a rising edge*)
+		MasterParID : UINT; (*ParID whose value shall be transferred from the master axis to the slave axis*)
+		InterpolationMode : McIplModeEnum; (*Interpolation mode for the received value*)
+		AdvancedParameters : McAcpAxAdvInitParIDTransferType; (*Additional advanced parameters*)
+	END_VAR
+	VAR_OUTPUT
+		Done : BOOL; (*execution successful. FB finished*)
+		Busy : BOOL; (*FB is active and needs to be called*)
+		Error : BOOL; (*error occurred during operation*)
+		ErrorID : DINT; (*error number*)
+		SlaveReceiveParID : UINT; (* The received ParID on the slave axis*)
+	END_VAR
+	VAR
+		Internal : McInternalTwoRefType; (*internal variable*)
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK MC_BR_GetParIDTransferInfo_AcpAx (*This function block provides administrative information about the ParID transfer of an axis.*)
+	VAR_INPUT
+		Axis : REFERENCE TO McAxisType; (*Axis reference.*)
+		Execute : BOOL; (*Gets transfer information on a rising edge.*)
+	END_VAR
+	VAR_OUTPUT
+		Done : BOOL; (*Execution successful. FB finished.*)
+		Busy : BOOL; (*FB is active and needs to be called.*)
+		Error : BOOL; (*Error occurred during operation.*)
+		ErrorID : DINT; (*Error number.*)
+		FreeMasterSendChannels : USINT; (*Number of send channels still available for the axis.*)
+		FreeSlaveReceiveChannels : USINT; (*Number of receive channels still available for the axis.*)
+		ParIDTransferInfo : McAcpAxParIDTransferInfoType; (*Detailed information about the current configuration of the send and receive channels for the axis.*)
+	END_VAR
+	VAR
+		Internal : McInternalType; (*Internal variable.*)
+ 	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK MC_BR_InitReceiveNetData_AcpAx (*This function block can be used to read 2-byte or 4-byte information from a POWERLINK station to a drive within the network.*)
+	VAR_INPUT
+		Axis : REFERENCE TO McAxisType; (*Axis reference.*)
+		Execute : BOOL; (*Activates cyclic receiving of POWERLINK data at rising edge.*)
+		ChannelMapping : STRING[250]; (*Channel mapping of the data source.*)
+		DataType : McAcpAxDataTypeEnum; (*Data type of the POWERLINK data.*)
+		InterpolationMode : McIplModeEnum; (*Interpolation mode for the received value.*)
+		AdvancedParameters : McAcpAxAdvInitReceiveNetDataType; (*Additional advanced parameters.*)
+	END_VAR
+	VAR_OUTPUT
+		Done : BOOL; (*Execution successful. FB finished.*)
+		Busy : BOOL; (*FB is active and needs to be called.*)
+		Error : BOOL; (*Error occurred during operation.*)
+		ErrorID : DINT; (*Error number.*)
+		ReceiveParID : UINT; (*The received ParID on the axis.*)
+	END_VAR
+	VAR
+		Internal : McInternalType; (*Internal variable.*)
+ 	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK MC_BR_ReceiveParIDOnPLC_AcpAx (*This function block cyclically reads the value of a ParID, transmitted by an axis, on the PLC.*)
+	VAR_INPUT
+		Axis : REFERENCE TO McAxisType; (*Axis reference of the ParID source.*)
+		Enable : BOOL; (*Enables the cyclic reading of the ParID *)
+		ParID : UINT; (*Source ParID.*)
+		AdvancedParameters : McAcpAxAdvReceiveParIDOnPLCType; (*Additional advanced parameters.*)
+ 	END_VAR
+	VAR_OUTPUT
+		Valid : BOOL; (*Initialization completed, FB is reading and outputting ParID.*)
+		Busy : BOOL; (*FB is active and needs to be called.*)
+		Error : BOOL; (*Error occurred during operation.*)
+		ErrorID : DINT; (*Error number.*)
+		CyclicValue : LREAL; (*Cyclically read value in raw format (i.e. the same value what is present on the drive).*)
+	END_VAR
+	VAR
+		Internal : McInternalType; (*Internal variable.*)
+ 	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK MC_BR_GetCyclicDataInfo_AcpAx (*This function block provides administrative information about telegram records that are cyclically written to and read from a drive channel.*)
+	VAR_INPUT
+		Axis : REFERENCE TO McAxisType; (*Axis reference.*)
+		Execute : BOOL; (*Get information on rising edge.*)
+	END_VAR
+	VAR_OUTPUT
+		Done : BOOL; (*Execution successful. FB finished.*)
+		Busy : BOOL; (*FB is active and needs to be called.*)
+		Error : BOOL; (*Error occurred during operation.*)
+		ErrorID : DINT; (*Error number.*)
+		CyclicDataInfo : McAcpAxCyclicDataInfoType; (*Information about the configuration of the cyclic write (to) and cyclic read (from) telegram records of the drive channel hosting the axis.*)
+	END_VAR
+	VAR
+		Internal : McInternalType; (*Internal variable.*)
+ 	END_VAR
+END_FUNCTION_BLOCK
+

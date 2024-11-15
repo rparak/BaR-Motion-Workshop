@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* McAxis 5.22.2 */
+/* McAxis 5.24.1 */
 
 #ifndef _MCAXIS_
 #define _MCAXIS_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _McAxis_VERSION
-#define _McAxis_VERSION 5.22.2
+#define _McAxis_VERSION 5.24.1
 #endif
 
 #include <bur/plctypes.h>

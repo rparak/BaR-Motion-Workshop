@@ -8,6 +8,8 @@
 /** < Include header file with specified structures / enums, etc. */
 #include "ax_ctrl.h"
 
+/// Custom structure for axis control and data collection (more in the header file -> axCtrl_T.h)
+_LOCAL struct motion_ctrl_main ctrl_lin_ax_0;
 
 /**
  * Program Intitialization
@@ -27,5 +29,3 @@ void _CYCLIC ProgramCyclic(void)
 {
 	
 }
-
-

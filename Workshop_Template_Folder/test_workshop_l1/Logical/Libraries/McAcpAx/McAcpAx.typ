@@ -191,6 +191,24 @@ TYPE
 		 mcACPAX_FBCTRL_MODE_2ENC_SPEED := 5 (*Two encoder speed: nc2ENCOD_SPEED*)
 	);
 
+ 	McAcpAxSendChannelEnum :
+	(
+		mcACPAX_SEND_CHANNEL_AUTO := 0, (*Select channel automatically*)
+		mcACPAX_SEND_CHANNEL_1 := 1, (*Select channel 1*)
+		mcACPAX_SEND_CHANNEL_2 := 2, (*Select channel 2*)
+		mcACPAX_SEND_CHANNEL_3 := 3 (*Select channel 3*)
+	);
+
+	McAcpAxReceiveChannelEnum :
+	(
+		mcACPAX_RECEIVE_CHANNEL_AUTO := 0, (*Select channel automatically*)
+		mcACPAX_RECEIVE_CHANNEL_1 := 1, (*Select channel 1*)
+		mcACPAX_RECEIVE_CHANNEL_2 := 2, (*Select channel 2*)
+		mcACPAX_RECEIVE_CHANNEL_3 := 3, (*Select channel 3*)
+		mcACPAX_RECEIVE_CHANNEL_4 := 4, (*Select channel 4*)
+		mcACPAX_RECEIVE_CHANNEL_5 := 5 (*Select channel 5*)
+	);
+
    	McAcpAxHomingParType : STRUCT
         HomingMode : McHomingModeEnum; (*Mode for homing*)
 		Position : LREAL; (*Absolute position or homing offset when homing signal [Measurement units] occurs*)
@@ -756,4 +774,64 @@ TYPE
 		Mass2 : McAcpAxLoadModelMass2Type; (*Mass 2 component of the load model.*)
 	END_STRUCT;
 
+	McAcpAxAdvInitParIDTransferType : STRUCT
+		MasterSendChannel : McAcpAxSendChannelEnum; (*Requested channel specifier on the Master axis to be used to send the value of the MasterParID.*)
+		SlaveReceiveChannel : McAcpAxReceiveChannelEnum; (*Requested channel specifier on the Slave axis to be used to receive the value of the MasterParID.*)
+	END_STRUCT;
+
+	McAcpAxParIDMasterSendInfoType : STRUCT
+		Used : BOOL; (*Indicates whether this channel is currently being used and the rest of the data below is valid.*)
+		ParID :  UINT; (*Master source ParID being sent via this channel.*)
+		ChangeAllowed : BOOL; (*Indicates whether it is possible to reconfigure this channel.*)
+	END_STRUCT;
+
+	McAcpAxParIDSlaveReceiveInfoType : STRUCT
+		Used : BOOL; (*Indicates whether this channel is currently being used and the rest of the data below is valid.*)
+		ParID :  UINT; (*Master source ParID being received via this channel.*)
+		ChangeAllowed : BOOL; (*Indicates whether it is possible to reconfigure this channel.*)
+		InterpolationMode : McIplModeEnum; (*Interpolation mode for the received value.*)
+		SendModuleAndElement : STRING[64]; (*Sender module (and element) information. Example: 'EPL: IF3.ST6 (CHAN1)'.*)
+	END_STRUCT;
+
+	McAcpAxParIDTransferInfoType : STRUCT
+		MasterSendInfo : ARRAY[0..3] OF McAcpAxParIDMasterSendInfoType; (*Detailed information about each of the individual send channels for the axis.*)
+		SlaveReceiveInfo : ARRAY[0..5] OF McAcpAxParIDSlaveReceiveInfoType; (*Detailed information about each of the individual receive channels for the axis.*)
+	END_STRUCT;
+
+	McAcpAxAdvInitReceiveNetDataType : STRUCT
+		NodeNumber : USINT; (*Node number of the POWERLINK station from which data should be received.*)
+		BitOffset : UINT; (*Bit offset of the POWERLINK data in the telegram from the transmitter from which point the data is read, must be a multiple of 16.*)
+		ReceiveChannel : McAcpAxReceiveChannelEnum; (*Requested channel number on the axis to be used to receive the data.*)
+	END_STRUCT;
+
+	McAcpAxAdvReceiveParIDOnPLCType : STRUCT
+		SendChannel : McAcpAxSendChannelEnum; (*Requested channel specifier on the source Axis to be used to send the value of the ParID.*)
+	END_STRUCT;
+
+	McAcpAxCyclicDataInfoType : STRUCT
+		Write : McAcpAxCyclicDataWriteInfoType; (*Information about the cyclic write data configuration.*)
+		Read : McAcpAxCyclicDataReadInfoType; (*Information about the cyclic read data configuration.*)
+	END_STRUCT;
+
+	McAcpAxCyclicDataWriteInfoType : STRUCT
+		RecordUpdateTime : UDINT; (*Time interval in which an individual telegram record is written to the drive channel [us].*)
+		Record : McAcpAxCyclicDataRecordInfoType; (*Information about the configuration of the telegram record written to the drive channel.*)
+	END_STRUCT;
+
+	McAcpAxCyclicDataReadInfoType : STRUCT
+		RecordUpdateTime : UDINT; (*Time interval in which an individual telegram record is read from the drive channel [us].*)
+		TotalUpdateTime : UDINT; (*Time interval in which all configured telegram records are read from the drive channel [us].*)
+		TotalParIDCount : USINT; (*Total number of ParIDs whose values are currently being read from the drive channel.*)
+		RecordCount : USINT; (*Number of configured telegrams records read from the drive channel.*)
+		Record : ARRAY[0..15] OF McAcpAxCyclicDataRecordInfoType; (*Information array about the configuration of the telegram records read from the drive channel.*)
+	END_STRUCT;
+
+	McAcpAxCyclicDataRecordInfoType : STRUCT
+		Size : USINT; (*Number of data bytes in this record.*)
+		OneByteCount : USINT; (*Number of one byte (8 bit) data in this record.*)
+		TwoByteCount : USINT; (*Number of two byte (16 bit) data in this record.*)
+		FourByteCount : USINT; (*Number of four byte (32 bit) data in this record.*)
+		ParIDCount : USINT; (*Number of ParIDs configured in this record (i.e. OneByteCount + TwoByteCount + FourByteCount).*)
+		ParID : ARRAY[0..11] OF UINT; (*Array of ParIDs configured in this record.*)
+	END_STRUCT;
 END_TYPE

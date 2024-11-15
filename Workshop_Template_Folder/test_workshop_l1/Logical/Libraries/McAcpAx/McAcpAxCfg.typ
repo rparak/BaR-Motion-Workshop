@@ -295,18 +295,29 @@ TYPE
 	McMSGBEnum :
 		( (*Gearbox selector setting*)
 		mcMSG_NOT_USE := 0, (*Not used -*)
-		mcMSG_USE := 1 (*Used -*)
+		mcMSG_USE := 1, (*Used -*)
+		mcMSG_USE_W_DYN_TORQ_LIM := 2 (*Used with dynamic torque limitation -*)
 		);
 	McMSGBUseType : STRUCT (*Type mcMSG_USE settings*)
 		GearRatio : McCfgGearBoxType; (*Ratio between a gearbox input and output*)
 		MaximumInputSpeed : REAL; (*Maximum permissible speed at gearbox input [rpm]*)
 		NominalOutputTorque : REAL; (*Nominal torque at gearbox output [Nm]*)
 		PeakOutputTorque : REAL; (*Peak torque at gearbox output [Nm]*)
-		MomentOfInertia : REAL; (*Moment of inertia for the gearbox [kgcm²]*)
+		MomentOfInertia : REAL; (*Moment of inertia for the gearbox at gearbox input [kgcm²]*)
+	END_STRUCT;
+	McMSGBUseWDynTorqLimType : STRUCT (*Type mcMSG_USE_W_DYN_TORQ_LIM settings*)
+		GearRatio : McCfgGearBoxType; (*Ratio between a gearbox input and output*)
+		MaximumInputSpeed : REAL; (*Maximum permissible speed at gearbox input [rpm]*)
+		NominalOutputTorque : REAL; (*Nominal torque at gearbox output [Nm]*)
+		PeakOutputTorque : REAL; (*Peak torque at gearbox output [Nm]*)
+		MomentOfInertia : REAL; (*Moment of inertia for the gearbox at gearbox input [kgcm²]*)
+		ViscousFriction : REAL; (*Speed dependent friction at gearbox input [torque per rotations/secound] [Nms]*)
+		StaticFriction : REAL; (*Static friction at gearbox input [Nm]*)
 	END_STRUCT;
 	McMSGBType : STRUCT (*Gearbox*)
 		Type : McMSGBEnum; (*Gearbox selector setting*)
 		Used : McMSGBUseType; (*Type mcMSG_USE settings*)
+		UsedWithDynamicTorqueLimitation : McMSGBUseWDynTorqLimType; (*Type mcMSG_USE_W_DYN_TORQ_LIM settings*)
 	END_STRUCT;
 	McCfgMotSynType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_MOT_SYN*)
 		Motor : McMSMotType;
@@ -455,18 +466,29 @@ TYPE
 	McMIGBEnum :
 		( (*Gearbox selector setting*)
 		mcMIG_NOT_USE := 0, (*Not used -*)
-		mcMIG_USE := 1 (*Used -*)
+		mcMIG_USE := 1, (*Used -*)
+		mcMIG_USE_W_DYN_TORQ_LIM := 2 (*Used with dynamic torque limitation -*)
 		);
 	McMIGBUseType : STRUCT (*Type mcMIG_USE settings*)
 		GearRatio : McCfgGearBoxType; (*Ratio between a gearbox input and output*)
 		MaximumInputSpeed : REAL; (*Maximum permissible speed at gearbox input [rpm]*)
 		NominalOutputTorque : REAL; (*Nominal torque at gearbox output [Nm]*)
 		PeakOutputTorque : REAL; (*Peak torque at gearbox output [Nm]*)
-		MomentOfInertia : REAL; (*Moment of inertia for the gearbox [kgcm²]*)
+		MomentOfInertia : REAL; (*Moment of inertia for the gearbox at gearbox input [kgcm²]*)
+	END_STRUCT;
+	McMIGBUseWDynTorqLimType : STRUCT (*Type mcMIG_USE_W_DYN_TORQ_LIM settings*)
+		GearRatio : McCfgGearBoxType; (*Ratio between a gearbox input and output*)
+		MaximumInputSpeed : REAL; (*Maximum permissible speed at gearbox input [rpm]*)
+		NominalOutputTorque : REAL; (*Nominal torque at gearbox output [Nm]*)
+		PeakOutputTorque : REAL; (*Peak torque at gearbox output [Nm]*)
+		MomentOfInertia : REAL; (*Moment of inertia for the gearbox at gearbox input [kgcm²]*)
+		ViscousFriction : REAL; (*Speed dependent friction at gearbox input [torque per rotations/secound] [Nms]*)
+		StaticFriction : REAL; (*Static friction at gearbox input [Nm]*)
 	END_STRUCT;
 	McMIGBType : STRUCT (*Gearbox*)
 		Type : McMIGBEnum; (*Gearbox selector setting*)
 		Used : McMIGBUseType; (*Type mcMIG_USE settings*)
+		UsedWithDynamicTorqueLimitation : McMIGBUseWDynTorqLimType; (*Type mcMIG_USE_W_DYN_TORQ_LIM settings*)
 	END_STRUCT;
 	McCfgMotInductType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_MOT_INDUCT*)
 		Motor : McMIMotType;
@@ -591,18 +613,29 @@ TYPE
 	McMSAMCGBEnum :
 		( (*Gearbox selector setting*)
 		mcMSAMCG_NOT_USE := 0, (*Not used -*)
-		mcMSAMCG_USE := 1 (*Used -*)
+		mcMSAMCG_USE := 1, (*Used -*)
+		mcMSAMCG_USE_W_DYN_TORQ_LIM := 2 (*Used with dynamic torque limitation -*)
 		);
 	McMSAMCGBUseType : STRUCT (*Type mcMSAMCG_USE settings*)
 		GearRatio : McCfgGearBoxType; (*Ratio between a gearbox input and output*)
 		MaximumInputSpeed : REAL; (*Maximum permissible speed at gearbox input [rpm]*)
 		NominalOutputTorque : REAL; (*Nominal torque at gearbox output [Nm]*)
 		PeakOutputTorque : REAL; (*Peak torque at gearbox output [Nm]*)
-		MomentOfInertia : REAL; (*Moment of inertia for the gearbox [kgcm²]*)
+		MomentOfInertia : REAL; (*Moment of inertia for the gearbox at gearbox input [kgcm²]*)
+	END_STRUCT;
+	McMSAMCGBUseWDynTorqLimType : STRUCT (*Type mcMSAMCG_USE_W_DYN_TORQ_LIM settings*)
+		GearRatio : McCfgGearBoxType; (*Ratio between a gearbox input and output*)
+		MaximumInputSpeed : REAL; (*Maximum permissible speed at gearbox input [rpm]*)
+		NominalOutputTorque : REAL; (*Nominal torque at gearbox output [Nm]*)
+		PeakOutputTorque : REAL; (*Peak torque at gearbox output [Nm]*)
+		MomentOfInertia : REAL; (*Moment of inertia for the gearbox at gearbox input [kgcm²]*)
+		ViscousFriction : REAL; (*Speed dependent friction at gearbox input [torque per rotations/secound] [Nms]*)
+		StaticFriction : REAL; (*Static friction at gearbox input [Nm]*)
 	END_STRUCT;
 	McMSAMCGBType : STRUCT (*Gearbox*)
 		Type : McMSAMCGBEnum; (*Gearbox selector setting*)
 		Used : McMSAMCGBUseType; (*Type mcMSAMCG_USE settings*)
+		UsedWithDynamicTorqueLimitation : McMSAMCGBUseWDynTorqLimType; (*Type mcMSAMCG_USE_W_DYN_TORQ_LIM settings*)
 	END_STRUCT;
 	McCfgMotSynAmcType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_MOT_SYN_AMC*)
 		Motor : McMSAMCMotType;
@@ -792,7 +825,8 @@ TYPE
 		mcAMPICEITIMEOF_MEOF_25000 := 0, (*MEOF 25000 - 25000 Hz*)
 		mcAMPICEITIMEOF_MEOF_50000 := 1, (*MEOF 50000 - 50000 Hz*)
 		mcAMPICEITIMEOF_MEOF_100000 := 2, (*MEOF 100000 - 100000 Hz*)
-		mcAMPICEITIMEOF_MEOF_200000 := 3 (*MEOF 200000 - 200000 Hz*)
+		mcAMPICEITIMEOF_MEOF_200000 := 3, (*MEOF 200000 - 200000 Hz*)
+		mcAMPICEITIMEOF_MEOF_400000 := 4 (*MEOF 400000 - 400000 Hz*)
 		);
 	McAMPICEITIncrOutStgEnum :
 		( (*Output stage*)
@@ -811,7 +845,8 @@ TYPE
 		mcAMPICEITIWDCMMEOF_MEOF_25000 := 0, (*MEOF 25000 - 25000 Hz*)
 		mcAMPICEITIWDCMMEOF_MEOF_50000 := 1, (*MEOF 50000 - 50000 Hz*)
 		mcAMPICEITIWDCMMEOF_MEOF_100000 := 2, (*MEOF 100000 - 100000 Hz*)
-		mcAMPICEITIWDCMMEOF_MEOF_200000 := 3 (*MEOF 200000 - 200000 Hz*)
+		mcAMPICEITIWDCMMEOF_MEOF_200000 := 3, (*MEOF 200000 - 200000 Hz*)
+		mcAMPICEITIWDCMMEOF_MEOF_400000 := 4 (*MEOF 400000 - 400000 Hz*)
 		);
 	McAMPICEITIWDCMOutStgEnum :
 		( (*Output stage*)
@@ -1438,7 +1473,9 @@ TYPE
 		mcACLFS_LIM := 5, (*Limiter - Limiter*)
 		mcACLFS_LIN_LIM := 6, (*Linear limitation - Linear limitation*)
 		mcACLFS_RISE_TIME_LIM := 7, (*Rise time limitation - Rise time limitation*)
-		mcACLFS_COMP := 8 (*Compensation - Compensation*)
+		mcACLFS_COMP := 8, (*Compensation - Compensation*)
+		mcACLFS_ADPT_NOTCH := 9, (*Adaptive notch - Adaptive notch*)
+		mcACLFS_VAR_CTRL_NOTCH := 10 (*Variable controlled notch - Variable controlled notch*)
 		);
 	McACLFSLP2ndOrdType : STRUCT (*Type mcACLFS_LP_2ND_ORD settings*)
 		CutOffFrequency : REAL; (*Cut off frequency [Hz]*)
@@ -1493,6 +1530,17 @@ TYPE
 		MultiplicationFactorParID : UINT; (*Multiplication Factor ParID*)
 		AdditiveValueParID : UINT; (*Additive Value ParID*)
 	END_STRUCT;
+	McACLFSAdptNotchType : STRUCT (*Type mcACLFS_ADPT_NOTCH settings*)
+		CenterFrequency : REAL; (*Center frequency [Hz]*)
+		Bandwidth : REAL; (*Bandwidth [Hz]*)
+		LowerFrequencyLimit : REAL; (*Lower frequency limit [Hz]*)
+		UpperFrequencyLimit : REAL; (*Upper frequency limit [Hz]*)
+		AdaptionThreshold : REAL; (*Adaption threshold [A]*)
+	END_STRUCT;
+	McACLFSVarCtrlNotchType : STRUCT (*Type mcACLFS_VAR_CTRL_NOTCH settings*)
+		CenterFrequencyParID : UINT; (*Center frequency ParID*)
+		BandwidthParID : UINT; (*Bandwidth ParID*)
+	END_STRUCT;
 	McACLFSType : STRUCT (*Type of the loop filter*)
 		Type : McACLFSEnum; (*Loop filter 1-3 selector setting*)
 		Lowpass2ndOrder : McACLFSLP2ndOrdType; (*Type mcACLFS_LP_2ND_ORD settings*)
@@ -1503,6 +1551,8 @@ TYPE
 		LinearLimitation : McACLFSLinLimType; (*Type mcACLFS_LIN_LIM settings*)
 		RiseTimeLimitation : McACLFSRiseTimeLimType; (*Type mcACLFS_RISE_TIME_LIM settings*)
 		Compensation : McACLFSCompType; (*Type mcACLFS_COMP settings*)
+		AdaptiveNotch : McACLFSAdptNotchType; (*Type mcACLFS_ADPT_NOTCH settings*)
+		VariableControlledNotch : McACLFSVarCtrlNotchType; (*Type mcACLFS_VAR_CTRL_NOTCH settings*)
 	END_STRUCT;
 	McACLFType : STRUCT (*Parameters of the loop filters*)
 		LoopFilter : ARRAY[0..2] OF McACLFSType; (*Type of the loop filter*)
@@ -2448,7 +2498,8 @@ TYPE
 		mcAEX41IT_ENDAT := 3, (*EnDat -*)
 		mcAEX41IT_HIPERFACE_DSL := 4, (*HIPERFACE DSL -*)
 		mcAEX41IT_TFMT := 5, (*T-Format - Tamagawa digital interface*)
-		mcAEX41IT_MOT_DAT_IF := 6 (*Motion Data Interface - B&R bi-directional asynchronous serial interface*)
+		mcAEX41IT_MOT_DAT_IF := 6, (*Motion Data Interface - B&R bi-directional asynchronous serial interface*)
+		mcAEX41IT_ENDAT_SAFEMOTION := 7 (*EnDat SafeMOTION -*)
 		);
 	McAEX41BPwrSupEnum :
 		( (*Power supply of the encoder*)
@@ -2550,7 +2601,8 @@ TYPE
 		mcAEX42IT_ENDAT := 3, (*EnDat -*)
 		mcAEX42IT_HIPERFACE_DSL := 4, (*HIPERFACE DSL -*)
 		mcAEX42IT_TFMT := 5, (*T-Format - Tamagawa digital interface*)
-		mcAEX42IT_MOT_DAT_IF := 6 (*Motion Data Interface - B&R bi-directional asynchronous serial interface*)
+		mcAEX42IT_MOT_DAT_IF := 6, (*Motion Data Interface - B&R bi-directional asynchronous serial interface*)
+		mcAEX42IT_ENDAT_SAFEMOTION := 7 (*EnDat SafeMOTION -*)
 		);
 	McAEX42BPwrSupEnum :
 		( (*Power supply of the encoder*)
@@ -2652,7 +2704,8 @@ TYPE
 		mcAEX43IT_ENDAT := 3, (*EnDat -*)
 		mcAEX43IT_HIPERFACE_DSL := 4, (*HIPERFACE DSL -*)
 		mcAEX43IT_TFMT := 5, (*T-Format - Tamagawa digital interface*)
-		mcAEX43IT_MOT_DAT_IF := 6 (*Motion Data Interface - B&R bi-directional asynchronous serial interface*)
+		mcAEX43IT_MOT_DAT_IF := 6, (*Motion Data Interface - B&R bi-directional asynchronous serial interface*)
+		mcAEX43IT_ENDAT_SAFEMOTION := 7 (*EnDat SafeMOTION -*)
 		);
 	McAEX43BPwrSupEnum :
 		( (*Power supply of the encoder*)
@@ -3081,6 +3134,88 @@ TYPE
 	END_STRUCT;
 	McCfgAcpExtEncAxHomeType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_ACP_EXT_ENC_AX_HOME*)
 		Homing : McAEEAHType; (*Homing mode and parameters which can be used within the application program as preconfigured setting*)
+	END_STRUCT;
+	McAFAIProdFamEnum :
+		( (*ACOPOS product family selector setting*)
+		mcAFAIPF_ACP := 0, (*ACOPOS -*)
+		mcAFAIPF_ACPM := 1, (*ACOPOSmulti -*)
+		mcAFAIPF_ACP_P3 := 2 (*ACOPOS P3 -*)
+		);
+	McAFAIACPAnInEnum :
+		( (*Analog input 1-4 selector setting*)
+		mcAFAIACPAI_SS2X111 := 0, (*SS2.X11.1 -*)
+		mcAFAIACPAI_SS2X112 := 1, (*SS2.X11.2 -*)
+		mcAFAIACPAI_SS3X111 := 2, (*SS3.X11.1 -*)
+		mcAFAIACPAI_SS3X112 := 3, (*SS3.X11.2 -*)
+		mcAFAIACPAI_SS4X111 := 4, (*SS4.X11.1 -*)
+		mcAFAIACPAI_SS4X112 := 5 (*SS4.X11.2 -*)
+		);
+	McAFAIAnInScEnum :
+		( (*Scaling selector setting*)
+		mcAFAIAIS_NOT_USE := 0, (*Not used -*)
+		mcAFAIAIS_USE := 1 (*Used -*)
+		);
+	McAFAIAnInScUseType : STRUCT (*Type mcAFAIAIS_USE settings*)
+		MinimumVoltage : REAL; (*Minimum voltage of the analog input [V]*)
+		MaximumVoltage : REAL; (*Maximum voltage of the analog input [V]*)
+		MinimumScaledValue : REAL; (*Minimum scaled value of the analog input [Signal units]*)
+		MaximumScaledValue : REAL; (*Maximum scaled value of the analog input [Signal units]*)
+	END_STRUCT;
+	McAFAIAnInScType : STRUCT
+		Type : McAFAIAnInScEnum; (*Scaling selector setting*)
+		Used : McAFAIAnInScUseType; (*Type mcAFAIAIS_USE settings*)
+	END_STRUCT;
+	McAFAIACPAnInCmnType : STRUCT (*Common settings for all Type values*)
+		Scaling : McAFAIAnInScType;
+	END_STRUCT;
+	McAFAIACPAnInType : STRUCT
+		Type : McAFAIACPAnInEnum; (*Analog input 1-4 selector setting*)
+		Common : McAFAIACPAnInCmnType; (*Common settings for all Type values*)
+	END_STRUCT;
+	McAFAIACPType : STRUCT (*Type mcAFAIPF_ACP settings*)
+		AnalogInput : McCfgUnboundedArrayType;
+	END_STRUCT;
+	McAFAIACPmultiAnInEnum :
+		( (*Analog input 1-4 selector setting*)
+		mcAFAIACPMULTIAI_SS2X111 := 0, (*SS2.X11.1 -*)
+		mcAFAIACPMULTIAI_SS2X112 := 1, (*SS2.X11.2 -*)
+		mcAFAIACPMULTIAI_SS2X113 := 2, (*SS2.X11.3 -*)
+		mcAFAIACPMULTIAI_SS2X114 := 3 (*SS2.X11.4 -*)
+		);
+	McAFAIACPmultiAnInCmnType : STRUCT (*Common settings for all Type values*)
+		Scaling : McAFAIAnInScType;
+	END_STRUCT;
+	McAFAIACPmultiAnInType : STRUCT
+		Type : McAFAIACPmultiAnInEnum; (*Analog input 1-4 selector setting*)
+		Common : McAFAIACPmultiAnInCmnType; (*Common settings for all Type values*)
+	END_STRUCT;
+	McAFAIACPmultiType : STRUCT (*Type mcAFAIPF_ACPM settings*)
+		AnalogInput : McCfgUnboundedArrayType;
+	END_STRUCT;
+	McAFAIACPP3AnInEnum :
+		( (*Analog input 1-3 selector setting*)
+		mcAFAIACPP3AI_SS1X41E1 := 0, (*SS1.X41E.1 -*)
+		mcAFAIACPP3AI_SS1X41E2 := 1, (*SS1.X41E.2 -*)
+		mcAFAIACPP3AI_SS1X41E3 := 2 (*SS1.X41E.3 -*)
+		);
+	McAFAIACPP3AnInCmnType : STRUCT (*Common settings for all Type values*)
+		Scaling : McAFAIAnInScType;
+	END_STRUCT;
+	McAFAIACPP3AnInType : STRUCT
+		Type : McAFAIACPP3AnInEnum; (*Analog input 1-3 selector setting*)
+		Common : McAFAIACPP3AnInCmnType; (*Common settings for all Type values*)
+	END_STRUCT;
+	McAFAIACPP3Type : STRUCT (*Type mcAFAIPF_ACP_P3 settings*)
+		AnalogInput : McCfgUnboundedArrayType;
+	END_STRUCT;
+	McAFAIProdFamType : STRUCT
+		Type : McAFAIProdFamEnum; (*ACOPOS product family selector setting*)
+		ACOPOS : McAFAIACPType; (*Type mcAFAIPF_ACP settings*)
+		ACOPOSmulti : McAFAIACPmultiType; (*Type mcAFAIPF_ACPM settings*)
+		ACOPOSP3 : McAFAIACPP3Type; (*Type mcAFAIPF_ACP_P3 settings*)
+	END_STRUCT;
+	McCfgAxFeatAInType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_AX_FEAT_A_IN*)
+		ProductFamily : McAFAIProdFamType;
 	END_STRUCT;
 	McCfgAxFeatAcpParTblType : STRUCT (*Main data type corresponding to McCfgTypeEnum mcCFG_AX_FEAT_ACP_PAR_TBL*)
 		ACOPOSParameterTableReference : STRING[250]; (*Name of the ACOPOS parameter table*)

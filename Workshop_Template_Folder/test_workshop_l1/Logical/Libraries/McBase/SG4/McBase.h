@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* McBase 5.22.2 */
+/* McBase 5.24.1 */
 
 #ifndef _MCBASE_
 #define _MCBASE_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _McBase_VERSION
-#define _McBase_VERSION 5.22.2
+#define _McBase_VERSION 5.24.1
 #endif
 
 #include <bur/plctypes.h>
@@ -82,7 +82,8 @@ typedef enum McHomingModeEnum
 
 typedef enum McStopModeEnum
 {	mcSTOPMODE_JERK_LIMIT,
-	mcSTOPMODE_NO_JERK_LIMIT
+	mcSTOPMODE_NO_JERK_LIMIT,
+	mcSTOPMODE_QUICKSTOP
 } McStopModeEnum;
 
 typedef enum McIplModeEnum
@@ -135,6 +136,7 @@ typedef enum McCoordinateSystemEnum
 	mcSCS3 = 5,
 	mcSCS4 = 6,
 	mcSCS5 = 7,
+	mcBCS = 8,
 	mcTCS = 9,
 	mcGCS = 10,
 	mcJACS = 100,
@@ -185,7 +187,8 @@ typedef enum McProcessConfigModeEnum
 {	mcPCM_LOAD = 0,
 	mcPCM_SAVE = 1,
 	mcPCM_CREATE = 2,
-	mcPCM_DELETE = 3
+	mcPCM_DELETE = 3,
+	mcPCM_DEFAULT_VALUES = 4
 } McProcessConfigModeEnum;
 
 typedef enum McCommunicationStateEnum
@@ -214,7 +217,10 @@ typedef enum McEncodingEnum
 
 typedef enum McCfgTypeEnum
 {	mcCFG_NONE = 0,
+	mcCFG_HW_MODULE = 5,
 	mcCFG_MMCFG = 10,
+	mcCFG_OBJ_HIER_GCS = 210,
+	mcCFG_OBJ_HIER = 200,
 	mcCFG_WS = 800,
 	mcCFG_TOOLTBL = 900,
 	mcCFG_FRMTBL = 1000,
@@ -222,10 +228,12 @@ typedef enum McCfgTypeEnum
 	mcCFG_TOOL = 1300,
 	mcCFG_LIMSET_LIN = 1411,
 	mcCFG_LIMSET_ROT = 1412,
+	mcCFG_CAMLST = 1500,
 	mcCFG_PROC_PT_LST = 1600,
 	mcCFG_TRK_PATH = 1700,
 	mcCFG_PICK_CORE = 2100,
 	mcCFG_PICK_REG = 2110,
+	mcCFG_PICK_REG_SCN = 2111,
 	mcCFG_PICK_OBJ_LST = 2120,
 	mcCFG_AX = 10000,
 	mcCFG_AX_BASE_TYP = 10011,
@@ -360,6 +368,7 @@ typedef enum McCfgTypeEnum
 	mcCFG_AXGRP_FEAT_TAN_TOOL = 21124,
 	mcCFG_AXGRP_FEAT_REV_MOVE = 21125,
 	mcCFG_AXGRP_FEAT_TRK = 21126,
+	mcCFG_AXGRP_FEAT_PIPE_CUT = 21127,
 	mcCFG_ASM = 31000,
 	mcCFG_ASM_FEAT_CPLG = 31101,
 	mcCFG_ASM_FEAT_SIM_SH_DEF = 31102,
@@ -412,6 +421,11 @@ typedef enum McMMCProcProcTskCEnum
 	mcMMCPPTC_CYC_2 = 2
 } McMMCProcProcTskCEnum;
 
+typedef enum McMMCPECOAEnum
+{	mcMMCPECOA_NOT_USE = 0,
+	mcMMCPECOA_USE = 1
+} McMMCPECOAEnum;
+
 typedef enum McMMCLogSelEnum
 {	mcMMCLS_NOT_USE = 0,
 	mcMMCLS_USE = 1
@@ -444,6 +458,91 @@ typedef enum McMMCLogSelUseSupSubcEEnum
 {	mcMMCLSUSSE_INACT = 0,
 	mcMMCLSUSSE_ACT = 1
 } McMMCLogSelUseSupSubcEEnum;
+
+typedef enum McOHGCSOTypEnum
+{	mcOHGCSOT_CMPT = 0,
+	mcOHGCSOT_STD_FRM = 1
+} McOHGCSOTypEnum;
+
+typedef enum McScnSurfaceEnum
+{	mcSOS_UDEF = 0,
+	mcSOS_RED_MATTE = 1,
+	mcSOS_BLUE_MATTE = 2,
+	mcSOS_GREY_MATTE = 3,
+	mcSOS_YELLOW_MATTE = 4,
+	mcSOS_GREEN_MATTE = 5,
+	mcSOS_ORANGE_MATTE = 6,
+	mcSOS_WHITE_MATTE = 7,
+	mcSOS_BLACK_MATTE = 8,
+	mcSOS_VIOLET_MATTE = 9,
+	mcSOS_METAL_SHINE = 10,
+	mcSOS_RED_METAL_SHINE = 11,
+	mcSOS_YELLOW_METAL_SHINE = 12,
+	mcSOS_BLACK_METAL_SHINE = 13,
+	mcSOS_CYAN_MATTE = 14,
+	mcSOS_MAGENTA_MATTE = 15,
+	mcSOS_LIGHT_GREY_MATTE = 16,
+	mcSOS_CERULEAN_BLUE_SHINE = 17,
+	mcSOS_SILVER = 18
+} McScnSurfaceEnum;
+
+typedef enum McOHMeasUnitLenMeasUnitEnum
+{	mcOHMULMU_MILL = 5066068,
+	mcOHMULMU_M = 5067858,
+	mcOHMULMU_INCH = 4804168
+} McOHMeasUnitLenMeasUnitEnum;
+
+typedef enum McOHMeasUnitAngMeasUnitEnum
+{	mcOHMUAMU_DEG = 17476,
+	mcOHMUAMU_GRAD = 4274481,
+	mcOHMUAMU_REV = 5059636
+} McOHMeasUnitAngMeasUnitEnum;
+
+typedef enum McOHRotDescEnum
+{	mcOHRD_CA = 0,
+	mcOHRD_EU = 1,
+	mcOHRD_NAUTICAL = 2,
+	mcOHRD_TAIT_BRYAN = 3
+} McOHRotDescEnum;
+
+typedef enum McOHRotDescCaRotOrdEnum
+{	mcOHRDCRO_XYZ = 0,
+	mcOHRDCRO_XZY = 1,
+	mcOHRDCRO_YXZ = 2,
+	mcOHRDCRO_YZX = 3,
+	mcOHRDCRO_ZXY = 4,
+	mcOHRDCRO_ZYX = 5
+} McOHRotDescCaRotOrdEnum;
+
+typedef enum McOHRotDescAngIntEnum
+{	mcOHRDAI_INTRINSIC = 0,
+	mcOHRDAI_EXTRINSIC = 1
+} McOHRotDescAngIntEnum;
+
+typedef enum McOHRotDescRotMatIntEnum
+{	mcOHRDRMI_DIR = 0,
+	mcOHRDRMI_INDIRECT = 1
+} McOHRotDescRotMatIntEnum;
+
+typedef enum McOHRotDescMathSenseEnum
+{	mcOHRDMS_POS = 0,
+	mcOHRDMS_NEG = 1
+} McOHRotDescMathSenseEnum;
+
+typedef enum McOHRotDescEuRotOrdEnum
+{	mcOHRDERO_XYZ = 0,
+	mcOHRDERO_XZY = 1,
+	mcOHRDERO_YXZ = 2,
+	mcOHRDERO_YZX = 3,
+	mcOHRDERO_ZXY = 4,
+	mcOHRDERO_ZYX = 5,
+	mcOHRDERO_XYX = 6,
+	mcOHRDERO_XZX = 7,
+	mcOHRDERO_YXY = 8,
+	mcOHRDERO_YZY = 9,
+	mcOHRDERO_ZXZ = 10,
+	mcOHRDERO_ZYZ = 11
+} McOHRotDescEuRotOrdEnum;
 
 typedef enum McCfgVarDatTypEnum
 {	mcCVDT_TYP_BOOL = 0,
@@ -520,6 +619,29 @@ typedef enum McCfgLimTorqEnum
 	mcCLT_BASIC = 1,
 	mcCLT_ADV = 2
 } McCfgLimTorqEnum;
+
+typedef enum McCLRowCamIDEnum
+{	mcCLRCI_CAM_ID_1 = 0,
+	mcCLRCI_CAM_ID_2 = 1,
+	mcCLRCI_CAM_ID_3 = 2,
+	mcCLRCI_CAM_ID_4 = 3,
+	mcCLRCI_CAM_ID_5 = 4,
+	mcCLRCI_CAM_ID_6 = 5,
+	mcCLRCI_CAM_ID_7 = 6,
+	mcCLRCI_CAM_ID_8 = 7,
+	mcCLRCI_CAM_ID_9 = 8,
+	mcCLRCI_CAM_ID_10 = 9,
+	mcCLRCI_CAM_ID_11 = 10,
+	mcCLRCI_CAM_ID_12 = 11,
+	mcCLRCI_CAM_ID_13 = 12,
+	mcCLRCI_CAM_ID_14 = 13,
+	mcCLRCI_CAM_ID_15 = 14,
+	mcCLRCI_CAM_ID_16 = 15,
+	mcCLRCI_CAM_ID_17 = 16,
+	mcCLRCI_CAM_ID_18 = 17,
+	mcCLRCI_CAM_ID_19 = 18,
+	mcCLRCI_CAM_ID_20 = 19
+} McCLRowCamIDEnum;
 
 typedef enum McPPLPtEnum
 {	mcPPLP_TRAK_PT = 0
@@ -703,8 +825,35 @@ typedef struct McCfgReferenceType
 	enum McCfgTypeEnum ConfigType;
 } McCfgReferenceType;
 
+typedef struct McCfgHwModuleSpecificsType
+{	plcstring Name[251];
+} McCfgHwModuleSpecificsType;
+
+typedef struct McMMCPECOAUseAxCompB4AllOthType
+{	struct McCfgUnboundedArrayType AxisReference;
+} McMMCPECOAUseAxCompB4AllOthType;
+
+typedef struct McMMCPECOAUseAxCompAShType
+{	struct McCfgUnboundedArrayType AxisReference;
+} McMMCPECOAUseAxCompAShType;
+
+typedef struct McMMCPECOAUseType
+{	struct McMMCPECOAUseAxCompB4AllOthType AxesComputedBeforeAllOthers;
+	struct McMMCPECOAUseAxCompAShType AxesComputedAfterShuttles;
+} McMMCPECOAUseType;
+
+typedef struct McMMCPECOAType
+{	enum McMMCPECOAEnum Type;
+	struct McMMCPECOAUseType Used;
+} McMMCPECOAType;
+
+typedef struct McMMCProcExpCompOrdType
+{	struct McMMCPECOAType Axis;
+} McMMCProcExpCompOrdType;
+
 typedef struct McMMCProcType
 {	enum McMMCProcProcTskCEnum ProcessingTaskClass;
+	struct McMMCProcExpCompOrdType ExplicitComputationOrder;
 } McMMCProcType;
 
 typedef struct McMMCLogSelUseAdmCmdSelType
@@ -773,6 +922,78 @@ typedef struct McCfgOrientType
 	double Angle2;
 	double Angle3;
 } McCfgOrientType;
+
+typedef struct McOHGCSOTCType
+{	struct McCfgReferenceType ComponentReference;
+	struct McCfgTransXYZType Translation;
+	struct McCfgOrientType Orientation;
+} McOHGCSOTCType;
+
+typedef struct McOHGCSOTSFType
+{	plcstring FrameName[251];
+	struct McCfgTransXYZType Translation;
+	struct McCfgOrientType Orientation;
+} McOHGCSOTSFType;
+
+typedef struct McOHGCSOTypType
+{	enum McOHGCSOTypEnum Type;
+	struct McOHGCSOTCType Component;
+	struct McOHGCSOTSFType StandardFrame;
+} McOHGCSOTypType;
+
+typedef struct McOHGCSObjType
+{	plcstring ParentObjectName[251];
+	struct McOHGCSOTypType Type;
+} McOHGCSObjType;
+
+typedef struct McOHGCSType
+{	struct McCfgUnboundedArrayType Object;
+} McOHGCSType;
+
+typedef struct McCfgObjHierGCSType
+{	struct McOHGCSType GlobalCoordinateSystem;
+} McCfgObjHierGCSType;
+
+typedef struct McOHMeasUnitType
+{	enum McOHMeasUnitLenMeasUnitEnum LengthMeasurementUnit;
+	enum McOHMeasUnitAngMeasUnitEnum AngleMeasurementUnit;
+} McOHMeasUnitType;
+
+typedef struct McOHRotDescCaType
+{	enum McOHRotDescCaRotOrdEnum RotationOrder;
+	enum McOHRotDescAngIntEnum AngleInterpretation;
+	enum McOHRotDescRotMatIntEnum RotationMatrixInterpretation;
+	enum McOHRotDescMathSenseEnum MathematicalSense;
+} McOHRotDescCaType;
+
+typedef struct McOHRotDescEuType
+{	enum McOHRotDescEuRotOrdEnum RotationOrder;
+	enum McOHRotDescAngIntEnum AngleInterpretation;
+	enum McOHRotDescRotMatIntEnum RotationMatrixInterpretation;
+	enum McOHRotDescMathSenseEnum MathematicalSense;
+} McOHRotDescEuType;
+
+typedef struct McOHRotDescType
+{	enum McOHRotDescEnum Type;
+	struct McOHRotDescCaType Cardan;
+	struct McOHRotDescEuType Euler;
+} McOHRotDescType;
+
+typedef struct McOHFrmTrfType
+{	double RotationTolerance;
+} McOHFrmTrfType;
+
+typedef struct McOHScnExType
+{	plcstring FileDevice[251];
+} McOHScnExType;
+
+typedef struct McCfgObjHierType
+{	struct McOHMeasUnitType MeasurementUnits;
+	struct McOHRotDescType RotationDescription;
+	struct McOHFrmTrfType FrameTransformations;
+	struct McOHScnExType SceneViewer;
+	struct McOHGCSType GlobalCoordinateSystem;
+} McCfgObjHierType;
 
 typedef struct McCfgVarDatTypTypSTRINGType
 {	unsigned long Length;
@@ -1002,6 +1223,16 @@ typedef struct McCfgLimSetRotType
 	struct McCfgLimJerkType Jerk;
 	struct McCfgLimTorqType Torque;
 } McCfgLimSetRotType;
+
+typedef struct McCLRowType
+{	plcstring CamName[251];
+	enum McCLRowCamIDEnum CamID;
+	plcstring Description[251];
+} McCLRowType;
+
+typedef struct McCfgCamLstType
+{	struct McCfgUnboundedArrayType Row;
+} McCfgCamLstType;
 
 typedef struct McPPLPtTrakPtBarrFunType
 {	enum McPPLPtTrakPtBarrFunEnum Type;
