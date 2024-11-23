@@ -48,6 +48,10 @@ mapp View  : 5.12.1
 mapp Cockpit: 5.12.0
 ```
 
+**Warning**
+
+If the problem occurs during the build with the **User.user** file within the **Configuration View**, just add a new configuration and **COPY+PASTE** the same file into the previous configuration and rebuild the project.
+
 ## Project Description:
 
 The workshop is focused on simple motion control using Mapp Technology and PLCOpen. The perfect combination of automation development solutions will be created by the additional connection of a visualization package (mappView) and software for digital/virtual twins (Scene Viewer).
